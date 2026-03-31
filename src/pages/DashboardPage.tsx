@@ -18,9 +18,9 @@ export default function DashboardPage() {
   ];
 
   const skillAreas = [
-    { name: t("tracks.common"), value: calcTrackProgress("common", progress) },
-    { name: t("tracks.offensive"), value: calcTrackProgress("offensive", progress) },
-    { name: t("tracks.defensive"), value: calcTrackProgress("defensive", progress) },
+    { name: t("tracks.common"), value: calcTrackProgress(modules, "common", progress) },
+    { name: t("tracks.offensive"), value: calcTrackProgress(modules, "offensive", progress) },
+    { name: t("tracks.defensive"), value: calcTrackProgress(modules, "defensive", progress) },
   ];
 
   return (
@@ -99,7 +99,11 @@ export default function DashboardPage() {
   );
 }
 
-function calcTrackProgress(track: string, progress: ReturnType<typeof getProgress>): number {
+function calcTrackProgress(
+  modules: ReturnType<typeof useContent>["modules"],
+  track: string,
+  progress: ReturnType<typeof getProgress>
+): number {
   const trackModules = modules.filter((m) => m.track === track);
   if (trackModules.length === 0) return 0;
   let total = 0;
