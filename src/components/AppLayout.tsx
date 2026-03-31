@@ -1,5 +1,6 @@
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -12,6 +13,9 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
             <span className="ml-3 text-sm text-muted-foreground font-mono">
               cyber_academy $
             </span>
+            <div className="ml-auto">
+              <LanguageSwitcher />
+            </div>
           </header>
           <main className="flex-1 overflow-auto">{children}</main>
         </div>

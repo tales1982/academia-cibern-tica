@@ -1,9 +1,12 @@
 import { useState } from "react";
-import { glossary } from "@/data/tools";
+import { useContent } from "@/data/content";
 import { Search, BookA } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import { useTranslation } from "react-i18next";
 
 export default function GlossaryPage() {
+  const { t } = useTranslation();
+  const { glossary } = useContent();
   const [search, setSearch] = useState("");
   const filtered = glossary.filter(
     (g) =>
@@ -17,15 +20,15 @@ export default function GlossaryPage() {
     <div className="p-6 md:p-10 space-y-6 max-w-4xl mx-auto">
       <div>
         <h1 className="text-2xl font-bold flex items-center gap-2">
-          <BookA className="h-6 w-6 text-primary" /> Glossário
+          <BookA className="h-6 w-6 text-primary" /> {t("glossary.title")}
         </h1>
-        <p className="text-muted-foreground text-sm">Terminologia essencial de cibersegurança</p>
+        <p className="text-muted-foreground text-sm">{t("glossary.subtitle")}</p>
       </div>
 
       <div className="relative">
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
         <Input
-          placeholder="Buscar termos..."
+          placeholder={t("glossary.search")}
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className="pl-9 bg-card"

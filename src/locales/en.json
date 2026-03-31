@@ -1,0 +1,134 @@
+{
+  "language": {
+    "label": "Language"
+  },
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "modules": "Modules",
+    "tools": "Tools",
+    "glossary": "Glossary",
+    "terminal": "Terminal",
+    "navigation": "Navigation",
+    "tracks": "Tracks"
+  },
+  "tracks": {
+    "common": "Common Core",
+    "offensive": "Offensive",
+    "defensive": "Defensive",
+    "offensiveFull": "Offensive Security",
+    "defensiveFull": "Defensive Security"
+  },
+  "home": {
+    "badge": "Training Platform",
+    "subtitle": "Master cybersecurity with interactive labs, attack and defense simulations, a terminal trainer, and a curriculum inspired by the best academies worldwide.",
+    "ctaStart": "Start Training",
+    "ctaProgress": "View Progress",
+    "learningPath": "Learning Path",
+    "modules": {
+      "common": "Modules 1–4",
+      "offensive": "Modules 5–9",
+      "defensive": "Modules 10–14"
+    },
+    "descriptions": {
+      "common": "Security fundamentals, Linux, networking, and scripting.",
+      "offensive": "Reconnaissance, web exploitation, attack techniques, and reporting.",
+      "defensive": "SOC, incident response, endpoints, identity, and governance."
+    },
+    "features": {
+      "terminal": {
+        "label": "Interactive Terminal",
+        "desc": "Practice Linux commands in a simulated environment"
+      },
+      "modules": {
+        "label": "14 Modules",
+        "desc": "From fundamentals to specialization"
+      },
+      "labs": {
+        "label": "Hands-on Labs",
+        "desc": "Attack and defense simulations"
+      },
+      "progress": {
+        "label": "Local Progress",
+        "desc": "Your data saved in the browser"
+      }
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "subtitle": "Track your training progress",
+    "stats": {
+      "modulesCompleted": "Modules Completed",
+      "xpTotal": "Total XP",
+      "labsCompleted": "Labs Completed",
+      "commandsPracticed": "Commands Practiced"
+    },
+    "overall": {
+      "title": "Overall Progress",
+      "courseCompletion": "Course completion"
+    },
+    "track": {
+      "progress": "Progress"
+    },
+    "modules": {
+      "title": "Modules"
+    }
+  },
+  "lessons": {
+    "title": "Training Modules",
+    "subtitle": "14 modules with theory, exercises, and labs",
+    "search": "Search modules or lessons...",
+    "all": "All",
+    "markComplete": "Mark as Completed",
+    "lab": "Interactive Lab"
+  },
+  "tools": {
+    "title": "Tools Library",
+    "subtitle": "Complete reference of key cybersecurity tools",
+    "search": "Search tools...",
+    "what": "What it does",
+    "when": "When to use",
+    "commands": "Commands",
+    "scenario": "Practical Scenario"
+  },
+  "glossary": {
+    "title": "Glossary",
+    "subtitle": "Essential cybersecurity terminology",
+    "search": "Search terms..."
+  },
+  "terminal": {
+    "title": "Terminal Trainer",
+    "subtitle": "Practice Linux commands in a simulated terminal — {{count}} commands practiced",
+    "tip": "Tip: Use ↑↓ to navigate command history. Try: ls, cat targets.txt, nmap 192.168.1.1, find / -perm -4000",
+    "welcome": "CyberAcademy Terminal Trainer v1.0\nType 'help' to see available commands.\n",
+    "commandNotFound": "bash: {{cmd}}: command not found. Type 'help' for help."
+  },
+  "ui": {
+    "close": "Close",
+    "pagination": {
+      "label": "Pagination",
+      "previous": "Previous",
+      "next": "Next",
+      "more": "More pages",
+      "ariaPrevious": "Go to previous page",
+      "ariaNext": "Go to next page"
+    },
+    "breadcrumb": {
+      "label": "Breadcrumb",
+      "more": "More"
+    },
+    "carousel": {
+      "roledescription": "Carousel",
+      "slide": "Slide",
+      "previous": "Previous slide",
+      "next": "Next slide"
+    },
+    "sidebar": {
+      "toggle": "Toggle sidebar"
+    }
+  },
+  "notFound": {
+    "title": "Oops! Page not found",
+    "back": "Return to Home"
+  }
+}

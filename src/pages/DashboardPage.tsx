@@ -1,30 +1,33 @@
 import { getProgress, getOverallProgress } from "@/lib/progress";
-import { modules } from "@/data/modules";
+import { useContent } from "@/data/content";
 import { Progress } from "@/components/ui/progress";
 import { Trophy, Flame, Zap, BookOpen, FlaskConical, Terminal } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function DashboardPage() {
+  const { t } = useTranslation();
+  const { modules } = useContent();
   const progress = getProgress();
   const overall = getOverallProgress();
 
   const stats = [
-    { icon: BookOpen, label: "Módulos Concluídos", value: `${overall.completed}/${overall.total}`, color: "text-primary" },
-    { icon: Zap, label: "XP Total", value: progress.totalXP.toString(), color: "text-cyber-amber" },
-    { icon: FlaskConical, label: "Labs Completados", value: Object.values(progress.modules).filter(m => m.labsCompleted > 0).length.toString(), color: "text-cyber-cyan" },
-    { icon: Terminal, label: "Comandos Praticados", value: progress.completedCommands.length.toString(), color: "text-cyber-purple" },
+    { icon: BookOpen, label: t("dashboard.stats.modulesCompleted"), value: `${overall.completed}/${overall.total}`, color: "text-primary" },
+    { icon: Zap, label: t("dashboard.stats.xpTotal"), value: progress.totalXP.toString(), color: "text-cyber-amber" },
+    { icon: FlaskConical, label: t("dashboard.stats.labsCompleted"), value: Object.values(progress.modules).filter(m => m.labsCompleted > 0).length.toString(), color: "text-cyber-cyan" },
+    { icon: Terminal, label: t("dashboard.stats.commandsPracticed"), value: progress.completedCommands.length.toString(), color: "text-cyber-purple" },
   ];
 
   const skillAreas = [
-    { name: "Fundamentos", value: calcTrackProgress("common", progress) },
-    { name: "Ofensivo", value: calcTrackProgress("offensive", progress) },
-    { name: "Defensivo", value: calcTrackProgress("defensive", progress) },
+    { name: t("tracks.common"), value: calcTrackProgress("common", progress) },
+    { name: t("tracks.offensive"), value: calcTrackProgress("offensive", progress) },
+    { name: t("tracks.defensive"), value: calcTrackProgress("defensive", progress) },
   ];
 
   return (
     <div className="p-6 md:p-10 space-y-8 max-w-5xl mx-auto">
       <div>
-        <h1 className="text-2xl font-bold">Dashboard</h1>
-        <p className="text-muted-foreground text-sm">Acompanhe seu progresso de treinamento</p>
+        <h1 className="text-2xl font-bold">{t("dashboard.title")}</h1>
+        <p className="text-muted-foreground text-sm">{t("dashboard.subtitle")}</p>
       </div>
 
       {/* Stats */}
@@ -43,11 +46,11 @@ export default function DashboardPage() {
       {/* Overall Progress */}
       <div className="rounded-lg border border-border bg-card p-6 space-y-4">
         <h2 className="font-semibold flex items-center gap-2">
-          <Trophy className="h-4 w-4 text-cyber-amber" /> Progresso Geral
+          <Trophy className="h-4 w-4 text-cyber-amber" /> {t("dashboard.overall.title")}
         </h2>
         <div className="space-y-2">
           <div className="flex justify-between text-sm">
-            <span className="text-muted-foreground">Conclusão do curso</span>
+            <span className="text-muted-foreground">{t("dashboard.overall.courseCompletion")}</span>
             <span className="font-mono text-primary">{overall.percentage}%</span>
           </div>
           <Progress value={overall.percentage} className="h-2" />
@@ -61,7 +64,7 @@ export default function DashboardPage() {
             <h3 className="font-semibold text-sm">{area.name}</h3>
             <div className="space-y-1">
               <div className="flex justify-between text-xs text-muted-foreground">
-                <span>Progresso</span>
+                <span>{t("dashboard.track.progress")}</span>
                 <span className="font-mono">{area.value}%</span>
               </div>
               <Progress value={area.value} className="h-1.5" />
@@ -73,7 +76,7 @@ export default function DashboardPage() {
       {/* Module List */}
       <div className="rounded-lg border border-border bg-card p-6 space-y-4">
         <h2 className="font-semibold flex items-center gap-2">
-          <Flame className="h-4 w-4 text-destructive" /> Módulos
+          <Flame className="h-4 w-4 text-destructive" /> {t("dashboard.modules.title")}
         </h2>
         <div className="space-y-2">
           {modules.map((mod) => {

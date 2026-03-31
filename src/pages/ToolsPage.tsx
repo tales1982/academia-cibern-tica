@@ -1,10 +1,13 @@
 import { useState } from "react";
-import { cyberTools } from "@/data/tools";
+import { useContent } from "@/data/content";
 import { Search, ChevronDown, ChevronRight, Terminal } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import { useTranslation } from "react-i18next";
 
 export default function ToolsPage() {
+  const { t } = useTranslation();
+  const { tools: cyberTools } = useContent();
   const [search, setSearch] = useState("");
   const [expanded, setExpanded] = useState<string | null>(null);
 
@@ -20,16 +23,16 @@ export default function ToolsPage() {
   return (
     <div className="p-6 md:p-10 space-y-6 max-w-4xl mx-auto">
       <div>
-        <h1 className="text-2xl font-bold">Biblioteca de Ferramentas</h1>
+        <h1 className="text-2xl font-bold">{t("tools.title")}</h1>
         <p className="text-muted-foreground text-sm">
-          Referência completa das principais ferramentas de cibersegurança
+          {t("tools.subtitle")}
         </p>
       </div>
 
       <div className="relative">
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
         <Input
-          placeholder="Buscar ferramentas..."
+          placeholder={t("tools.search")}
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className="pl-9 bg-card"
@@ -65,21 +68,21 @@ export default function ToolsPage() {
                     <div className="border-t border-border p-4 space-y-4">
                       <div>
                         <h4 className="text-xs text-muted-foreground uppercase tracking-wider mb-1">
-                          O que faz
+                          {t("tools.what")}
                         </h4>
                         <p className="text-sm text-foreground/80">{tool.description}</p>
                       </div>
 
                       <div>
                         <h4 className="text-xs text-muted-foreground uppercase tracking-wider mb-1">
-                          Quando usar
+                          {t("tools.when")}
                         </h4>
                         <p className="text-sm text-foreground/80">{tool.usage}</p>
                       </div>
 
                       <div>
                         <h4 className="text-xs text-muted-foreground uppercase tracking-wider mb-2">
-                          Comandos
+                          {t("tools.commands")}
                         </h4>
                         <div className="bg-background rounded-md p-3 space-y-1 overflow-x-auto">
                           {tool.commands.map((cmd, i) => (
@@ -92,7 +95,7 @@ export default function ToolsPage() {
 
                       <div>
                         <h4 className="text-xs text-muted-foreground uppercase tracking-wider mb-1">
-                          Cenário Prático
+                          {t("tools.scenario")}
                         </h4>
                         <p className="text-sm text-foreground/80 italic">{tool.scenario}</p>
                       </div>

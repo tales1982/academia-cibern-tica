@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import {
   Sidebar,
   SidebarContent,
@@ -23,22 +24,8 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar";
 
-const mainItems = [
-  { title: "Início", url: "/", icon: Home },
-  { title: "Dashboard", url: "/dashboard", icon: LayoutDashboard },
-  { title: "Módulos", url: "/lessons", icon: BookOpen },
-  { title: "Ferramentas", url: "/tools", icon: Wrench },
-  { title: "Glossário", url: "/glossary", icon: BookA },
-  { title: "Terminal", url: "/terminal", icon: Terminal },
-];
-
-const tracks = [
-  { title: "Common Core", url: "/lessons?track=common", icon: Shield },
-  { title: "Ofensivo", url: "/lessons?track=offensive", icon: Sword },
-  { title: "Defensivo", url: "/lessons?track=defensive", icon: ShieldCheck },
-];
-
 export function AppSidebar() {
+  const { t } = useTranslation();
   const { state } = useSidebar();
   const collapsed = state === "collapsed";
   const location = useLocation();
@@ -46,6 +33,21 @@ export function AppSidebar() {
     if (path.includes("?")) return location.pathname + location.search === path;
     return location.pathname === path;
   };
+
+  const mainItems = [
+    { title: t("nav.home"), url: "/", icon: Home },
+    { title: t("nav.dashboard"), url: "/dashboard", icon: LayoutDashboard },
+    { title: t("nav.modules"), url: "/lessons", icon: BookOpen },
+    { title: t("nav.tools"), url: "/tools", icon: Wrench },
+    { title: t("nav.glossary"), url: "/glossary", icon: BookA },
+    { title: t("nav.terminal"), url: "/terminal", icon: Terminal },
+  ];
+
+  const tracks = [
+    { title: t("tracks.common"), url: "/lessons?track=common", icon: Shield },
+    { title: t("tracks.offensive"), url: "/lessons?track=offensive", icon: Sword },
+    { title: t("tracks.defensive"), url: "/lessons?track=defensive", icon: ShieldCheck },
+  ];
 
   return (
     <Sidebar collapsible="icon" className="border-r border-border">
@@ -61,7 +63,7 @@ export function AppSidebar() {
 
         <SidebarGroup>
           <SidebarGroupLabel className="text-muted-foreground text-xs uppercase tracking-wider">
-            Navegação
+            {t("nav.navigation")}
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
@@ -86,7 +88,7 @@ export function AppSidebar() {
 
         <SidebarGroup>
           <SidebarGroupLabel className="text-muted-foreground text-xs uppercase tracking-wider">
-            Trilhas
+            {t("nav.tracks")}
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>

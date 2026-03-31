@@ -1,0 +1,134 @@
+{
+  "language": {
+    "label": "Idioma"
+  },
+  "nav": {
+    "home": "Início",
+    "dashboard": "Dashboard",
+    "modules": "Módulos",
+    "tools": "Ferramentas",
+    "glossary": "Glossário",
+    "terminal": "Terminal",
+    "navigation": "Navegação",
+    "tracks": "Trilhas"
+  },
+  "tracks": {
+    "common": "Núcleo Comum",
+    "offensive": "Ofensivo",
+    "defensive": "Defensivo",
+    "offensiveFull": "Segurança Ofensiva",
+    "defensiveFull": "Segurança Defensiva"
+  },
+  "home": {
+    "badge": "Plataforma de Treinamento",
+    "subtitle": "Domine cibersegurança com laboratórios interativos, simulações de ataque e defesa, terminal trainer e um currículo inspirado nas melhores academias do mundo.",
+    "ctaStart": "Iniciar Treinamento",
+    "ctaProgress": "Ver Progresso",
+    "learningPath": "Trilha de Aprendizado",
+    "modules": {
+      "common": "Módulos 1–4",
+      "offensive": "Módulos 5–9",
+      "defensive": "Módulos 10–14"
+    },
+    "descriptions": {
+      "common": "Fundamentos de segurança, Linux, redes e scripting.",
+      "offensive": "Reconhecimento, exploração web, técnicas de ataque e reporting.",
+      "defensive": "SOC, resposta a incidentes, endpoints, identidade e governança."
+    },
+    "features": {
+      "terminal": {
+        "label": "Terminal Interativo",
+        "desc": "Pratique comandos Linux em ambiente simulado"
+      },
+      "modules": {
+        "label": "14 Módulos",
+        "desc": "Do fundamento à especialização"
+      },
+      "labs": {
+        "label": "Labs Práticos",
+        "desc": "Simulações de ataque e defesa"
+      },
+      "progress": {
+        "label": "Progresso Local",
+        "desc": "Seus dados salvos no navegador"
+      }
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "subtitle": "Acompanhe seu progresso de treinamento",
+    "stats": {
+      "modulesCompleted": "Módulos Concluídos",
+      "xpTotal": "XP Total",
+      "labsCompleted": "Labs Completados",
+      "commandsPracticed": "Comandos Praticados"
+    },
+    "overall": {
+      "title": "Progresso Geral",
+      "courseCompletion": "Conclusão do curso"
+    },
+    "track": {
+      "progress": "Progresso"
+    },
+    "modules": {
+      "title": "Módulos"
+    }
+  },
+  "lessons": {
+    "title": "Módulos de Treinamento",
+    "subtitle": "14 módulos com conteúdo teórico, exercícios e laboratórios",
+    "search": "Buscar módulos ou lições...",
+    "all": "Todos",
+    "markComplete": "Marcar como Concluída",
+    "lab": "Lab Interativo"
+  },
+  "tools": {
+    "title": "Biblioteca de Ferramentas",
+    "subtitle": "Referência completa das principais ferramentas de cibersegurança",
+    "search": "Buscar ferramentas...",
+    "what": "O que faz",
+    "when": "Quando usar",
+    "commands": "Comandos",
+    "scenario": "Cenário Prático"
+  },
+  "glossary": {
+    "title": "Glossário",
+    "subtitle": "Terminologia essencial de cibersegurança",
+    "search": "Buscar termos..."
+  },
+  "terminal": {
+    "title": "Treinador de Terminal",
+    "subtitle": "Pratique comandos Linux em um terminal simulado — {{count}} comandos praticados",
+    "tip": "Dica: Use ↑↓ para navegar no histórico de comandos. Experimente: ls, cat targets.txt, nmap 192.168.1.1, find / -perm -4000",
+    "welcome": "CyberAcademy Terminal Trainer v1.0\nDigite 'help' para ver os comandos disponíveis.\n",
+    "commandNotFound": "bash: {{cmd}}: comando não encontrado. Digite 'help' para ajuda."
+  },
+  "ui": {
+    "close": "Fechar",
+    "pagination": {
+      "label": "Paginação",
+      "previous": "Anterior",
+      "next": "Próximo",
+      "more": "Mais páginas",
+      "ariaPrevious": "Ir para a página anterior",
+      "ariaNext": "Ir para a próxima página"
+    },
+    "breadcrumb": {
+      "label": "Caminho de navegação",
+      "more": "Mais"
+    },
+    "carousel": {
+      "roledescription": "Carrossel",
+      "slide": "Slide",
+      "previous": "Slide anterior",
+      "next": "Próximo slide"
+    },
+    "sidebar": {
+      "toggle": "Alternar barra lateral"
+    }
+  },
+  "notFound": {
+    "title": "Oops! Página não encontrada",
+    "back": "Voltar para Início"
+  }
+}

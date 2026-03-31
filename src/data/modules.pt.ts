@@ -1,18 +1,4 @@
-export interface CyberModule {
-  id: string;
-  number: number;
-  title: string;
-  description: string;
-  track: "common" | "offensive" | "defensive";
-  lessons: CyberLesson[];
-  labTitle: string;
-  labDescription: string;
-}
-
-export interface CyberLesson {
-  title: string;
-  content: string;
-}
+import { CyberModule } from "./content.types";
 
 export const modules: CyberModule[] = [
   {
@@ -260,7 +246,3 @@ export const modules: CyberModule[] = [
     ],
   },
 ];
-
-export function getModulesByTrack(track: "common" | "offensive" | "defensive"): CyberModule[] {
-  return modules.filter((m) => m.track === track);
-}

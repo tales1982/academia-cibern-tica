@@ -1,0 +1,134 @@
+{
+  "language": {
+    "label": "Langue"
+  },
+  "nav": {
+    "home": "Accueil",
+    "dashboard": "Tableau de bord",
+    "modules": "Modules",
+    "tools": "Outils",
+    "glossary": "Glossaire",
+    "terminal": "Terminal",
+    "navigation": "Navigation",
+    "tracks": "Parcours"
+  },
+  "tracks": {
+    "common": "Tronc commun",
+    "offensive": "Offensif",
+    "defensive": "Défensif",
+    "offensiveFull": "Sécurité offensive",
+    "defensiveFull": "Sécurité défensive"
+  },
+  "home": {
+    "badge": "Plateforme de formation",
+    "subtitle": "Maîtrisez la cybersécurité avec des laboratoires interactifs, des simulations d’attaque et de défense, un terminal d’entraînement et un programme inspiré des meilleures académies au monde.",
+    "ctaStart": "Commencer la formation",
+    "ctaProgress": "Voir la progression",
+    "learningPath": "Parcours d’apprentissage",
+    "modules": {
+      "common": "Modules 1–4",
+      "offensive": "Modules 5–9",
+      "defensive": "Modules 10–14"
+    },
+    "descriptions": {
+      "common": "Fondamentaux de sécurité, Linux, réseaux et scripting.",
+      "offensive": "Reconnaissance, exploitation web, techniques d’attaque et reporting.",
+      "defensive": "SOC, réponse aux incidents, endpoints, identité et gouvernance."
+    },
+    "features": {
+      "terminal": {
+        "label": "Terminal interactif",
+        "desc": "Pratiquez des commandes Linux dans un environnement simulé"
+      },
+      "modules": {
+        "label": "14 modules",
+        "desc": "Des fondamentaux à la spécialisation"
+      },
+      "labs": {
+        "label": "Labs pratiques",
+        "desc": "Simulations d’attaque et de défense"
+      },
+      "progress": {
+        "label": "Progression locale",
+        "desc": "Vos données enregistrées dans le navigateur"
+      }
+    }
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "subtitle": "Suivez votre progression de formation",
+    "stats": {
+      "modulesCompleted": "Modules terminés",
+      "xpTotal": "XP total",
+      "labsCompleted": "Labs terminés",
+      "commandsPracticed": "Commandes pratiquées"
+    },
+    "overall": {
+      "title": "Progression globale",
+      "courseCompletion": "Achèvement du cours"
+    },
+    "track": {
+      "progress": "Progression"
+    },
+    "modules": {
+      "title": "Modules"
+    }
+  },
+  "lessons": {
+    "title": "Modules de formation",
+    "subtitle": "14 modules avec théorie, exercices et labs",
+    "search": "Rechercher des modules ou des leçons...",
+    "all": "Tous",
+    "markComplete": "Marquer comme terminée",
+    "lab": "Lab interactif"
+  },
+  "tools": {
+    "title": "Bibliothèque d’outils",
+    "subtitle": "Référence complète des principaux outils de cybersécurité",
+    "search": "Rechercher des outils...",
+    "what": "Ce que ça fait",
+    "when": "Quand utiliser",
+    "commands": "Commandes",
+    "scenario": "Scénario pratique"
+  },
+  "glossary": {
+    "title": "Glossaire",
+    "subtitle": "Terminologie essentielle en cybersécurité",
+    "search": "Rechercher des termes..."
+  },
+  "terminal": {
+    "title": "Entraînement terminal",
+    "subtitle": "Pratiquez des commandes Linux dans un terminal simulé — {{count}} commandes pratiquées",
+    "tip": "Astuce : utilisez ↑↓ pour naviguer dans l’historique. Essayez : ls, cat targets.txt, nmap 192.168.1.1, find / -perm -4000",
+    "welcome": "CyberAcademy Terminal Trainer v1.0\nTapez 'help' pour voir les commandes disponibles.\n",
+    "commandNotFound": "bash: {{cmd}} : commande introuvable. Tapez 'help' pour l’aide."
+  },
+  "ui": {
+    "close": "Fermer",
+    "pagination": {
+      "label": "Pagination",
+      "previous": "Précédent",
+      "next": "Suivant",
+      "more": "Plus de pages",
+      "ariaPrevious": "Aller à la page précédente",
+      "ariaNext": "Aller à la page suivante"
+    },
+    "breadcrumb": {
+      "label": "Fil d’Ariane",
+      "more": "Plus"
+    },
+    "carousel": {
+      "roledescription": "Carrousel",
+      "slide": "Diapositive",
+      "previous": "Diapositive précédente",
+      "next": "Diapositive suivante"
+    },
+    "sidebar": {
+      "toggle": "Basculer la barre latérale"
+    }
+  },
+  "notFound": {
+    "title": "Oups ! Page introuvable",
+    "back": "Retour à l’accueil"
+  }
+}

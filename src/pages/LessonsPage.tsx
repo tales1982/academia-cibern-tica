@@ -1,20 +1,22 @@
 import { useState } from "react";
 import { useSearchParams, Link } from "react-router-dom";
-import { modules } from "@/data/modules";
+import { useContent } from "@/data/content";
 import { getProgress, completeLesson } from "@/lib/progress";
 import { ChevronDown, ChevronRight, CheckCircle2, Circle, Search, Shield, Sword, ShieldCheck } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-
-const trackConfig = {
-  common: { label: "Common Core", icon: Shield, color: "bg-primary/10 text-primary" },
-  offensive: { label: "Ofensivo", icon: Sword, color: "bg-cyber-amber/10 text-cyber-amber" },
-  defensive: { label: "Defensivo", icon: ShieldCheck, color: "bg-cyber-cyan/10 text-cyber-cyan" },
-};
+import { useTranslation } from "react-i18next";
 
 export default function LessonsPage() {
+  const { t } = useTranslation();
+  const trackConfig = {
+    common: { label: t("tracks.common"), icon: Shield, color: "bg-primary/10 text-primary" },
+    offensive: { label: t("tracks.offensive"), icon: Sword, color: "bg-cyber-amber/10 text-cyber-amber" },
+    defensive: { label: t("tracks.defensive"), icon: ShieldCheck, color: "bg-cyber-cyan/10 text-cyber-cyan" },
+  };
   const [searchParams, setSearchParams] = useSearchParams();
+  const { modules } = useContent();
   const trackFilter = searchParams.get("track") as "common" | "offensive" | "defensive" | null;
   const [expandedModule, setExpandedModule] = useState<string | null>(null);
   const [expandedLesson, setExpandedLesson] = useState<string | null>(null);
@@ -36,8 +38,8 @@ export default function LessonsPage() {
   return (
     <div className="p-6 md:p-10 space-y-6 max-w-4xl mx-auto">
       <div>
-        <h1 className="text-2xl font-bold">Módulos de Treinamento</h1>
-        <p className="text-muted-foreground text-sm">14 módulos com conteúdo teórico, exercícios e laboratórios</p>
+        <h1 className="text-2xl font-bold">{t("lessons.title")}</h1>
+        <p className="text-muted-foreground text-sm">{t("lessons.subtitle")}</p>
       </div>
 
       {/* Filters */}
@@ -45,7 +47,7 @@ export default function LessonsPage() {
         <div className="relative flex-1 min-w-[200px]">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
-            placeholder="Buscar módulos ou lições..."
+            placeholder={t("lessons.search")}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="pl-9 bg-card"
@@ -57,7 +59,7 @@ export default function LessonsPage() {
             size="sm"
             onClick={() => setSearchParams({})}
           >
-            Todos
+            {t("lessons.all")}
           </Button>
           {(Object.keys(trackConfig) as Array<keyof typeof trackConfig>).map((t) => (
             <Button
@@ -173,7 +175,7 @@ export default function LessonsPage() {
                                 onClick={() => handleCompleteLesson(mod.id, idx)}
                                 className="font-mono"
                               >
-                                Marcar como Concluída
+                                {t("lessons.markComplete")}
                               </Button>
                             )}
                           </div>
@@ -188,7 +190,7 @@ export default function LessonsPage() {
                       🧪 {mod.labTitle}
                     </h4>
                     <p className="text-xs text-muted-foreground">{mod.labDescription}</p>
-                    <Badge variant="outline" className="text-xs">Lab Interativo</Badge>
+                    <Badge variant="outline" className="text-xs">{t("lessons.lab")}</Badge>
                   </div>
                 </div>
               )}
