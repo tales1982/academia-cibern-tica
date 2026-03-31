@@ -80,7 +80,56 @@
     "search": "Search modules or lessons...",
     "all": "All",
     "markComplete": "Mark as Completed",
-    "lab": "Interactive Lab"
+    "lab": "Interactive Lab",
+    "openLab": "Open Lab"
+  },
+  "labs": {
+    "moduleLabel": "Module {{number}} — {{title}}",
+    "explanation": "Complete the lab to record progress and consolidate learning.",
+    "backToModules": "Back to modules",
+    "statusCompleted": "Completed",
+    "statusPending": "Pending",
+    "complete": "Complete Lab",
+    "completed": "Lab completed",
+    "ready": "You're ready to complete.",
+    "completeHint": "Answer correctly to complete.",
+    "comingSoonTitle": "Lab in progress",
+    "comingSoonDesc": "This lab will be released soon.",
+    "notFound": "Lab not found",
+    "responsibleDisclosure": {
+      "title": "Scenario: Responsible Disclosure",
+      "intro": "You found a vulnerability and need to act ethically. Choose the best response for each step.",
+      "q1": {
+        "question": "You discovered an XSS on a public website. What is the correct next step?",
+        "options": {
+          "a": "Post the issue on social media immediately.",
+          "b": "Exploit it to extract data and prove impact.",
+          "c": "Document PoC, impact, and prepare a private report.",
+          "d": "Sell the exploit to a third party."
+        },
+        "explanation": "Correct: document the PoC and report privately is the ethical path."
+      },
+      "q2": {
+        "question": "You sent the report and got no response after 7 days. What should you do?",
+        "options": {
+          "a": "Disclose publicly to pressure them.",
+          "b": "Follow up politely and confirm the right contact channel.",
+          "c": "End contact and move on.",
+          "d": "Exploit the flaw to show urgency."
+        },
+        "explanation": "A polite follow-up and contact confirmation is recommended."
+      },
+      "q3": {
+        "question": "The agreed deadline passed and the fix is not out. What is the most responsible action?",
+        "options": {
+          "a": "Publish everything immediately without notice.",
+          "b": "Delete the report and never talk again.",
+          "c": "Negotiate a final deadline and warn about disclosure.",
+          "d": "Demand payment before any action."
+        },
+        "explanation": "Negotiate a final deadline and warn about disclosure is the responsible standard."
+      }
+    }
   },
   "tools": {
     "title": "Tools Library",

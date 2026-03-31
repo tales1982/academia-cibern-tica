@@ -185,10 +185,17 @@ export default function LessonsPage() {
                   })}
 
                   {/* Lab */}
-                  <div className="mt-4 p-4 rounded-md border border-primary/20 bg-primary/5 space-y-2">
-                    <h4 className="font-semibold text-sm text-primary flex items-center gap-2">
-                      🧪 {mod.labTitle}
-                    </h4>
+                  <div className="mt-4 p-4 rounded-md border border-primary/20 bg-primary/5 space-y-3">
+                    <div className="flex flex-wrap items-center justify-between gap-3">
+                      <h4 className="font-semibold text-sm text-primary flex items-center gap-2">
+                        🧪 {mod.labTitle}
+                      </h4>
+                      <Button size="sm" variant="outline" asChild>
+                        <Link to={`/labs/${mod.id}`}>
+                          {t("lessons.openLab")}
+                        </Link>
+                      </Button>
+                    </div>
                     <p className="text-xs text-muted-foreground">{mod.labDescription}</p>
                     <Badge variant="outline" className="text-xs">{t("lessons.lab")}</Badge>
                   </div>

@@ -7,6 +7,7 @@ import AppLayout from "@/components/AppLayout";
 import HomePage from "./pages/HomePage";
 import DashboardPage from "./pages/DashboardPage";
 import LessonsPage from "./pages/LessonsPage";
+import LabPage from "./pages/LabPage";
 import ToolsPage from "./pages/ToolsPage";
 import GlossaryPage from "./pages/GlossaryPage";
 import TerminalPage from "./pages/TerminalPage";
@@ -25,6 +26,7 @@ const App = () => (
             <Route path="/" element={<HomePage />} />
             <Route path="/dashboard" element={<DashboardPage />} />
             <Route path="/lessons" element={<LessonsPage />} />
+            <Route path="/labs/:moduleId" element={<LabPage />} />
             <Route path="/tools" element={<ToolsPage />} />
             <Route path="/glossary" element={<GlossaryPage />} />
             <Route path="/terminal" element={<TerminalPage />} />

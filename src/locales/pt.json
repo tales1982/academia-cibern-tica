@@ -80,7 +80,56 @@
     "search": "Buscar módulos ou lições...",
     "all": "Todos",
     "markComplete": "Marcar como Concluída",
-    "lab": "Lab Interativo"
+    "lab": "Lab Interativo",
+    "openLab": "Abrir Lab"
+  },
+  "labs": {
+    "moduleLabel": "Módulo {{number}} — {{title}}",
+    "explanation": "Complete o lab para registrar progresso e consolidar o aprendizado.",
+    "backToModules": "Voltar aos módulos",
+    "statusCompleted": "Concluído",
+    "statusPending": "Pendente",
+    "complete": "Concluir Lab",
+    "completed": "Lab concluído",
+    "ready": "Tudo certo para concluir.",
+    "completeHint": "Responda corretamente para concluir.",
+    "comingSoonTitle": "Lab em construção",
+    "comingSoonDesc": "Este laboratório será liberado em breve.",
+    "notFound": "Lab não encontrado",
+    "responsibleDisclosure": {
+      "title": "Cenário: Divulgação Responsável",
+      "intro": "Você encontrou uma vulnerabilidade e precisa agir de forma ética. Escolha a melhor resposta para cada etapa.",
+      "q1": {
+        "question": "Você descobriu um XSS em um site público. Qual o próximo passo correto?",
+        "options": {
+          "a": "Publicar a falha nas redes sociais imediatamente.",
+          "b": "Explorar a falha para extrair dados e provar impacto.",
+          "c": "Documentar PoC, impacto e preparar um relatório privado.",
+          "d": "Vender o exploit para um terceiro."
+        },
+        "explanation": "Resposta correta: documentar a PoC e comunicar de forma privada é o caminho ético."
+      },
+      "q2": {
+        "question": "Você enviou o relatório e não recebeu resposta em 7 dias. O que fazer?",
+        "options": {
+          "a": "Divulgar publicamente para pressionar.",
+          "b": "Fazer follow‑up educado e confirmar o canal correto.",
+          "c": "Encerrar o contato e seguir para outro alvo.",
+          "d": "Explorar a falha para demonstrar urgência."
+        },
+        "explanation": "Follow‑up educado e confirmação de contato é a prática recomendada."
+      },
+      "q3": {
+        "question": "O prazo combinado expirou e a correção não saiu. Qual atitude mais responsável?",
+        "options": {
+          "a": "Publicar tudo imediatamente, sem aviso.",
+          "b": "Excluir o relatório e nunca mais falar.",
+          "c": "Negociar prazo final e avisar sobre possível divulgação.",
+          "d": "Cobrar pagamento antes de qualquer ação."
+        },
+        "explanation": "Negociar prazo final e avisar sobre divulgação é o padrão responsável."
+      }
+    }
   },
   "tools": {
     "title": "Biblioteca de Ferramentas",

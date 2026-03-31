@@ -80,7 +80,56 @@
     "search": "Rechercher des modules ou des leçons...",
     "all": "Tous",
     "markComplete": "Marquer comme terminée",
-    "lab": "Lab interactif"
+    "lab": "Lab interactif",
+    "openLab": "Ouvrir le lab"
+  },
+  "labs": {
+    "moduleLabel": "Module {{number}} — {{title}}",
+    "explanation": "Terminez le lab pour enregistrer la progression et consolider l’apprentissage.",
+    "backToModules": "Retour aux modules",
+    "statusCompleted": "Terminé",
+    "statusPending": "En attente",
+    "complete": "Terminer le lab",
+    "completed": "Lab terminé",
+    "ready": "Vous pouvez terminer.",
+    "completeHint": "Répondez correctement pour terminer.",
+    "comingSoonTitle": "Lab en préparation",
+    "comingSoonDesc": "Ce lab sera disponible bientôt.",
+    "notFound": "Lab introuvable",
+    "responsibleDisclosure": {
+      "title": "Scénario : Divulgation responsable",
+      "intro": "Vous avez trouvé une vulnérabilité et devez agir de manière éthique. Choisissez la meilleure réponse à chaque étape.",
+      "q1": {
+        "question": "Vous avez découvert un XSS sur un site public. Quelle est la prochaine étape correcte ?",
+        "options": {
+          "a": "Publier la faille sur les réseaux sociaux immédiatement.",
+          "b": "Exploiter la faille pour extraire des données et prouver l’impact.",
+          "c": "Documenter la PoC, l’impact et préparer un rapport privé.",
+          "d": "Vendre l’exploit à un tiers."
+        },
+        "explanation": "Correct : documenter la PoC et signaler en privé est la voie éthique."
+      },
+      "q2": {
+        "question": "Vous avez envoyé le rapport et aucune réponse après 7 jours. Que faire ?",
+        "options": {
+          "a": "Divulguer publiquement pour mettre la pression.",
+          "b": "Relancer poliment et confirmer le bon canal de contact.",
+          "c": "Mettre fin au contact et passer à autre chose.",
+          "d": "Exploiter la faille pour montrer l’urgence."
+        },
+        "explanation": "Une relance polie et la confirmation du contact est recommandée."
+      },
+      "q3": {
+        "question": "Le délai convenu est passé et le correctif n’est pas sorti. Quelle est l’action la plus responsable ?",
+        "options": {
+          "a": "Publier tout immédiatement sans avertir.",
+          "b": "Supprimer le rapport et ne plus jamais en parler.",
+          "c": "Négocier un dernier délai et prévenir d’une possible divulgation.",
+          "d": "Exiger un paiement avant toute action."
+        },
+        "explanation": "Négocier un dernier délai et prévenir de la divulgation est la norme responsable."
+      }
+    }
   },
   "tools": {
     "title": "Bibliothèque d’outils",
